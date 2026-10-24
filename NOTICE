@@ -1,0 +1,24 @@
+DiZien Launcher 0.1.5
+Copyright (C) 2026 the DiZien Launcher authors
+Licensed under the GNU General Public License v3.0 or later (see "GPL-3.0").
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
+
+Bundled third-party material
+----------------------------
+1. DejaVu Sans Mono (regular and bold), used as the UI font.
+   Bitstream Vera / DejaVu license (permissive, free to use, embed and redistribute). Full text: "DejaVu Sans Mono font".
+   https://dejavu-fonts.github.io/
+2. Debian Open Use Logo (reference tile in About only).
+   (c) 1999 SPI, Inc. LGPL-3.0-or-later or CC BY-SA 3.0. See "Debian Open Use Logo (CC BY-SA 3.0 notice)".
+3. AndroidX / Jetpack Compose libraries (Apache License 2.0), linked at build time.
+   https://developer.android.com/jetpack  -  Apache-2.0 text: https://www.apache.org/licenses/LICENSE-2.0
+
+Original material made for this project (GPL-3.0)
+-------------------------------------------------
+- The app icon (rounded grid mark), all wallpapers (drawn by code at runtime), and the line glyph symbols
+  used for built-in shortcuts are original to this project. No third-party wallpaper images or icon packs are bundled.
+- The app name and icon do not use the Debian name or the Debian swirl.
+
+Trademark
+---------
+Not affiliated with Debian. Debian is a registered trademark owned by Software in the Public Interest, Inc.

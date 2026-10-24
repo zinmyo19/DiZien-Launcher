@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Debug builds only: posts sample notifications so the panel can be tested. Not in the release APK. -->
+    <application>
+        <receiver android:name=".DebugPostReceiver" android:exported="true">
+            <intent-filter><action android:name="app.slatehome.dizien.DEBUG_POST" /></intent-filter>
+        </receiver>
+    </application>
+</manifest>

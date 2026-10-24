@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DiZien Launcher</string>
+    <string name="lock_service_desc">Lets DiZien Launcher lock the screen when you double-tap Home. It receives no events and reads nothing on screen.</string>
+    <string name="lock_service_label">DiZien screen lock</string>
+</resources>

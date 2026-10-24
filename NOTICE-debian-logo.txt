@@ -1,0 +1,16 @@
+Debian Open Use Logo
+
+Not affiliated with Debian. Debian is a registered trademark owned by Software in the Public Interest, Inc.
+
+DiZien Launcher shows the official Debian Open Use Logo (without the "Debian" label) only as a reference tile in the About
+section of Settings. It is NOT the icon or the name of this app.
+
+The Debian Open Use Logo is Copyright (c) 1999 Software in the Public Interest, Inc. It is released under the terms of the
+GNU Lesser General Public License, version 3 or any later version (full text: "Debian Open Use Logo (LGPL-3.0)" in this list),
+or, at your option, the Creative Commons Attribution-ShareAlike 3.0 Unported License
+(https://creativecommons.org/licenses/by-sa/3.0/legalcode).
+
+Source: https://www.debian.org/logos/  (file openlogo-nd.svg, rendered unchanged apart from rasterising to PNG).
+Creator: Raul Silva.
+
+This app is an independent project. Using the Open Use Logo does not imply endorsement by Debian or SPI.
