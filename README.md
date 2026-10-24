@@ -5,7 +5,7 @@ look: selectable themes, icon styles and wallpapers, swipeable Home pages with
 a fixed dock, Android widgets, a search bar, an all-apps drawer, a themed
 notification panel, and Settings / About.
 
-> **Status: early review build (0.1.5).** It has been tested on an Android
+> **Status: early review build (0.1.6).** It has been tested on an Android
 > emulator (x86_64, Android 9) and on the owner's own phone. It has not been
 > tested widely, so expect rough edges. Bug reports and pull requests are
 > welcome.
@@ -36,7 +36,7 @@ Software in the Public Interest, Inc.**
 
 ## Install
 
-1. Download `DZianLauncher-0.1.5-review.apk` from the
+1. Download `DZianLauncher-0.1.6-review.apk` from the
    [Releases](../../releases) page.
 2. Allow "install unknown apps" for your browser or file manager, then open the APK.
    Requires Android 7.0+ (API 24). The app has no native code, so the same APK runs on arm64-v8a, x86_64 and other CPUs.

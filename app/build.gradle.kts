@@ -19,8 +19,8 @@ android {
         applicationId = "app.slatehome.dizien"
         minSdk = 24
         targetSdk = 34
-        versionCode = 6
-        versionName = "0.1.5"
+        versionCode = 7
+        versionName = "0.1.6"
         // The app has no native code, so it runs on every ABI; these are the two we test and ship for.
         ndk { abiFilters += listOf("arm64-v8a", "x86_64") }
     }

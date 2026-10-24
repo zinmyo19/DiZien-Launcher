@@ -181,6 +181,39 @@ object IconRenderer {
         return b
     }
 
+
+    /**
+     * Liquid Glass for every installed app: a frosted tile first, then the app's own art sitting
+     * inside it. The icon's solid background (often white) is only laid over the glass at low
+     * opacity, so the tile stays see-through, while the foreground keeps the app's colours.
+     */
+    private fun glassApp(c: Canvas, icon: Drawable, adaptive: Boolean, pal: Palette, r: RectF, size: Int) {
+        drawGlassTile(c, pal, r, size, true)
+        val inner = RectF(r).apply { inset(r.width() * 0.09f, r.width() * 0.09f) }
+        val clip = shapePath(SH_RR, inner)
+        c.save()
+        c.clipPath(clip)
+        if (adaptive) {
+            val ad = icon as AdaptiveIconDrawable
+            val big = inner.width() * 1.5f
+            val l = inner.centerX() - big / 2; val t = inner.centerY() - big / 2
+            val bounds = android.graphics.Rect(l.toInt(), t.toInt(), (l + big).toInt(), (t + big).toInt())
+            ad.background?.let {
+                c.saveLayerAlpha(inner, 120)
+                it.bounds = bounds; it.draw(c)
+                c.restore()
+            }
+            ad.foreground?.let { it.bounds = bounds; it.draw(c) }
+        } else {
+            // Old-style icons: soften the opaque square a little and keep it inside the glass.
+            c.saveLayerAlpha(inner, 235)
+            icon.setBounds(inner.left.toInt(), inner.top.toInt(), inner.right.toInt(), inner.bottom.toInt())
+            icon.draw(c)
+            c.restore()
+        }
+        c.restore()
+        drawGlassTile(c, pal, r, size, false)
+    }
     /** An installed app. */
     fun app(ctx: Context, app: AppEntry, style: Int, themeTint: Boolean, pal: Palette, size: Int): Bitmap {
         val icon: Drawable = try { app.info.getIcon(0) } catch (_: Exception) { ctx.packageManager.defaultActivityIcon }
@@ -224,6 +257,8 @@ object IconRenderer {
             }
             c.drawBitmap(glyphLayer, r.centerX() - g / 2f, r.centerY() - g / 2f, tintPaint)
             glyphLayer.recycle()
+        } else if (style == IconStyle.GLASS) {
+            glassApp(c, icon, adaptive, pal, r, size)
         } else {
             // Original colours, clipped to the style's tile shape.
             val sp = spec(style)
