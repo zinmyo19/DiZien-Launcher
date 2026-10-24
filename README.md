@@ -39,7 +39,7 @@ Software in the Public Interest, Inc.**
 1. Download `DZianLauncher-0.1.5-review.apk` from the
    [Releases](../../releases) page.
 2. Allow "install unknown apps" for your browser or file manager, then open the APK.
-   Requires Android 7.0+ (API 24). The APK contains arm64-v8a and x86_64 builds.
+   Requires Android 7.0+ (API 24). The app has no native code, so the same APK runs on arm64-v8a, x86_64 and other CPUs.
 3. The release APK is signed with a review key, so it can only be updated by
    builds signed with the same key. Builds you compile yourself need to be
    uninstalled first.
